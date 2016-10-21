@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IHero } from '../ihero';
 
 @Component({
   selector: 'hero-detail',
@@ -6,7 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent {
-  @Input() id: number;
-  @Input() name: string;
-  constructor() { }
+  @Input() hero: IHero;
+
+  constructor() {  
+    this.hero = {
+      id: 1,
+      name: 'hassan'
+    };
+  }
+  
 }
